@@ -4,7 +4,7 @@ This is a simple React JS App for generating a password according to the Morocca
 
 ## Live Preview
 
-Click Here: [Password Generator - MH]()
+Click Here: [Password Generator - MH](https://password-generator-mh.netlify.app/)
 
 
 ## Python Script
