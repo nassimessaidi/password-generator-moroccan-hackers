@@ -8,8 +8,8 @@ const Main = ({ theme, setTheme }) => {
   const [input, setInput] = useState("");
   const [showCopied, setShowCopied] = useState(false);
   const [isdarkModeOn, setIsDarkModeOn] = useState(() => {
-    if (!localStorage.getItem("darkmode")) return true;
-    else return localStorage.getItem("darkmode");
+    if (!localStorage.getItem("darkmode")) return "";
+    return localStorage.getItem("darkmode");
   });
 
   const copyToClipboard = () => {
@@ -43,10 +43,13 @@ const Main = ({ theme, setTheme }) => {
   useEffect(() => {
     if (isdarkModeOn) {
       setTheme("text-darkprimary bg-darkprimary");
+      localStorage.setItem("darkmode", true);
     } else {
       setTheme("text-lightprimary bg-lightprimary");
+      localStorage.setItem("darkmode", "");
     }
   }, [isdarkModeOn, setTheme]);
+
   return (
     <>
       <motion.main
@@ -64,7 +67,7 @@ const Main = ({ theme, setTheme }) => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 1.5 }}
-                className={`w-10 h-10 rounded-full p-1 ${"text-lightsecondary bg-lightsecondary"} cursor-pointer`}
+                className={`w-8 h-8 rounded-full p-1 ${"text-lightsecondary bg-lightsecondary"} cursor-pointer`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -84,7 +87,7 @@ const Main = ({ theme, setTheme }) => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 exit={{ opacity: 0.2, y: 200 }}
-                className={`w-10 h-10  rounded-full p-1 ${"text-darksecondary bg-darksecondary"} cursor-pointer`}
+                className={`w-8 h-8  rounded-full p-1 ${"text-darksecondary bg-darksecondary"} cursor-pointer`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
