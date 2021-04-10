@@ -8,7 +8,7 @@ const Main = ({ theme, setTheme }) => {
   const [input, setInput] = useState("");
   const [showCopied, setShowCopied] = useState(false);
   const [isdarkModeOn, setIsDarkModeOn] = useState(() => {
-    if (!localStorage.getItem("darkmode")) return false;
+    if (!localStorage.getItem("darkmode")) return true;
     else return localStorage.getItem("darkmode");
   });
 
