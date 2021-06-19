@@ -130,33 +130,34 @@ const Main = ({ theme, setTheme }) => {
             Password Generator
           </h1>
           <div className="flex items-center space-x-1">
-            <h3
-              className={`uppercase text-center sm:text-xs sm:font-normal font-normal text-xs ${
-                isdarkModeOn ? "text-darkprimary" : "text-lightprimary"
-              }  `}
+            <a
+              href="https://www.facebook.com/Moroccan.Hack3rs/posts/3804404489596867"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex space-x-1 items-center"
             >
-              <a
-                href="https://www.facebook.com/Moroccan.Hack3rs/posts/3804404489596867"
-                target="_blank"
-                rel="noopener noreferrer"
+              <h3
+                className={`uppercase text-center sm:text-xs sm:font-normal font-normal text-xs ${
+                  isdarkModeOn ? "text-darkprimary" : "text-lightprimary"
+                }  `}
               >
-                Moroccan Hackers
-              </a>
-            </h3>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 cursor-pointer"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
+                <h2>Moroccan Hackers</h2>
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 cursor-pointer"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
           </div>
         </div>
         <div className="w-full">
